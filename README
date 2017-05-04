@@ -1,0 +1,5 @@
+Stock Analysis:
+
+1> Built a model to calculate sentiment on news articles
+2> Used the sentiment analysis results along with Volume index to predict stock
+3> Found out feed forward MLP to perform the best
