@@ -18,7 +18,7 @@ library(ggrepel)
 ```
 
 
-Building a model to do sentiment analysis on tweets:
+Building a GLM model to do sentiment analysis on tweets:
 
 
 Preparing data for model building:
@@ -62,7 +62,7 @@ tweets_test <- tweets_classified[-trainIndex, ]
 
 ```
 
-Building and training model:
+Building and training model using classified tweets:
 ```{r}
 # define preprocessing function and tokenization function
 
@@ -119,7 +119,7 @@ glmnet:::auc(as.numeric(tweets_test$sentiment), preds)
 saveRDS(glmnet_classifier, 'glmnet_classifier.RDS')
 ```
 
-Performing sentiment analysis on topics:
+Performing sentiment analysis on top 25 news topics of each day:
 ```{r}
 
 # reading topics from dataset
@@ -317,7 +317,7 @@ plot(nnDJ)
 ```
 
 
-NEURAL NETWORK with increased number of neuronsn in first hidden layers:
+NEURAL NETWORK with increased number of neurons in first hidden layers:
 
 ```{r}
 
@@ -359,7 +359,7 @@ plot(nnDJ3)
 ```
 
 
-Neural Network with BakPropogation:
+Neural Network with Back - Propogation:
 
 ```{r}
 layers=c(3,2)
